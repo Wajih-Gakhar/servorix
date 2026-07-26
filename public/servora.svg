@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 80" width="360" height="80">
+  <defs>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <linearGradient id="orbitGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="orbitGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0EA5E9" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0EA5E9" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="orbitGrad3" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon group: centered at 38,40 -->
+  <g transform="translate(2, 2)">
+
+    <!-- Outer orbit ring 1 — large arc, tilted ~-30deg -->
+    <path d="M 38,10 A 30,30 0 0,1 64,52" stroke="url(#orbitGrad1)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <!-- Node on orbit 1 -->
+    <circle cx="64" cy="52" r="3.5" fill="#06B6D4"/>
+    <circle cx="64" cy="52" r="1.8" fill="#1E293B"/>
+
+    <!-- Middle orbit ring 2 -->
+    <path d="M 38,17 A 22,22 0 0,0 16,40 A 22,22 0 0,0 30,60" stroke="url(#orbitGrad2)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <!-- Node on orbit 2 -->
+    <circle cx="30" cy="60" r="3.5" fill="#0EA5E9"/>
+    <circle cx="30" cy="60" r="1.8" fill="#1E293B"/>
+
+    <!-- Inner orbit ring 3 — small arc -->
+    <path d="M 50,22 A 15,15 0 0,1 53,40 A 15,15 0 0,1 38,55" stroke="url(#orbitGrad3)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <!-- Node on orbit 3 -->
+    <circle cx="38" cy="55" r="3.5" fill="#06B6D4" opacity="0.8"/>
+    <circle cx="38" cy="55" r="1.8" fill="#1E293B"/>
+
+    <!-- Central hexagon hub -->
+    <!-- Hexagon path centered at 38,38 radius 11 -->
+    <polygon 
+      points="38,27 47.5,32.5 47.5,43.5 38,49 28.5,43.5 28.5,32.5" 
+      fill="#1E293B" 
+      stroke="url(#tealGrad)" 
+      stroke-width="1.8"
+    />
+    <!-- Inner hexagon fill glow -->
+    <polygon 
+      points="38,30.5 45,34.5 45,42.5 38,46.5 31,42.5 31,34.5" 
+      fill="#06B6D4" 
+      opacity="0.12"
+    />
+    <!-- Center dot -->
+    <circle cx="38" cy="38" r="4.5" fill="url(#tealGrad)"/>
+    <circle cx="38" cy="38" r="2" fill="white" opacity="0.9"/>
+
+  </g>
+
+  <!-- Wordmark: "Servora" in Sora/geometric sans -->
+  <text 
+    x="90" y="51"
+    font-family="'Sora', 'Outfit', 'Montserrat', sans-serif"
+    font-size="30"
+    font-weight="700"
+    letter-spacing="-0.3"
+    fill="#1E293B"
+  >Ser<tspan fill="#06B6D4">vora</tspan></text>
+
+  <!-- Subtle teal dot accent after wordmark -->
+  <circle cx="288" cy="44" r="3.2" fill="#06B6D4"/>
+</svg>

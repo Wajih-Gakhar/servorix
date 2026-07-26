@@ -1,0 +1,258 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id                         String                    @id @default(uuid())
+  email                      String                    @unique
+  password                   String
+  role                       String                    @default("CUSTOMER")
+  name                       String
+  phone                      String?
+  profileImage               String?
+  resetToken                 String?
+  resetTokenExpiry           DateTime?
+  refreshToken               String?
+  refreshTokenExpiry         DateTime?
+  createdAt                  DateTime                  @default(now())
+  updatedAt                  DateTime                  @updatedAt
+  appointments               Appointment[]
+  businesses                 Business[]
+  conversationParticipations ConversationParticipant[]
+  loyaltyPoints              LoyaltyPoints[]
+  messages                   Message[]                 @relation("MessageSender")
+  messagesSeen               MessageSeen[]
+  notifications              Notification[]
+  payments                   Payment[]
+  reviews                    Review[]
+}
+
+model Business {
+  id           String         @id @default(uuid())
+  ownerId      String
+  name         String
+  description  String
+  businessLogo String?
+  website      String?
+  address      String
+  city         String
+  phone        String
+  status       String         @default("PENDING")
+  type         String
+  category     String?
+  rating       Float          @default(0)
+  latitude     Float?
+  longitude    Float?
+  openingTime  String
+  closingTime  String
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+  appointments Appointment[]
+  owner        User           @relation(fields: [ownerId], references: [id])
+  payments     Payment[]
+  reviews      Review[]
+  services     Service[]
+  workingHours  WorkingHours[]
+  conversations Conversation[]
+  subscription  BusinessSubscription?
+}
+
+model Service {
+  id           String        @id @default(uuid())
+  businessId   String
+  name         String
+  price        Float
+  duration     Int
+  appointments Appointment[]
+  business     Business      @relation(fields: [businessId], references: [id])
+}
+
+model Appointment {
+  id         String    @id @default(uuid())
+  customerId String
+  businessId String
+  serviceId  String
+  date       String
+  startTime  String
+  status     String    @default("PENDING")
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+  service    Service   @relation(fields: [serviceId], references: [id])
+  business   Business  @relation(fields: [businessId], references: [id])
+  customer   User      @relation(fields: [customerId], references: [id])
+  payments   Payment[]
+}
+
+model Review {
+  id         String   @id @default(uuid())
+  customerId String
+  businessId String
+  rating     Int
+  comment    String?
+  createdAt  DateTime @default(now())
+  business   Business @relation(fields: [businessId], references: [id])
+  customer   User     @relation(fields: [customerId], references: [id])
+}
+
+model Notification {
+  id        String   @id @default(uuid())
+  userId    String
+  title     String
+  message   String
+  type      String
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id])
+}
+
+model Payment {
+  id            String      @id @default(uuid())
+  bookingId     String
+  businessId    String
+  userId        String
+  amount        Float
+  platformFee   Float
+  ownerAmount   Float       @default(0)
+  status        String      @default("PENDING")
+  paymentMethod String
+  paymentType   String      @default("FULL")
+  createdAt     DateTime    @default(now())
+  user          User        @relation(fields: [userId], references: [id])
+  business      Business    @relation(fields: [businessId], references: [id])
+  appointment   Appointment @relation(fields: [bookingId], references: [id])
+}
+
+model LoyaltyPoints {
+  id        String   @id @default(uuid())
+  userId    String
+  points    Int      @default(0)
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id])
+}
+
+model WorkingHours {
+  id         String   @id @default(uuid())
+  businessId String
+  dayOfWeek  Int
+  openTime   String
+  closeTime  String
+  business   Business @relation(fields: [businessId], references: [id])
+}
+
+model Conversation {
+  id           String                    @id @default(uuid())
+  type         String
+  businessId   String?
+  business     Business?                 @relation(fields: [businessId], references: [id])
+  bookingId    String?
+  reportReason String?
+  reportDesc   String?
+  reportStatus String?
+  updatedAt    DateTime                  @updatedAt
+  createdAt    DateTime                  @default(now())
+  deletedAt    DateTime?
+  participants ConversationParticipant[]
+  messages     Message[]
+
+  @@index([type])
+  @@index([businessId])
+  @@index([reportStatus])
+}
+
+model ConversationParticipant {
+  id             String       @id @default(uuid())
+  conversationId String
+  userId         String
+  joinedAt       DateTime     @default(now())
+  hiddenAt       DateTime?
+  user           User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  conversation   Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+
+  @@unique([conversationId, userId])
+}
+
+model Message {
+  id             String        @id @default(uuid())
+  conversationId String
+  senderId       String
+  content        String
+  fileUrl        String?
+  fileType       String?
+  createdAt      DateTime      @default(now())
+  deletedAt      DateTime?
+  sender         User          @relation("MessageSender", fields: [senderId], references: [id], onDelete: Cascade)
+  conversation   Conversation  @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  seenBy         MessageSeen[]
+
+  @@index([conversationId])
+  @@index([createdAt])
+}
+
+model MessageSeen {
+  id        String   @id @default(uuid())
+  messageId String
+  userId    String
+  seenAt    DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  message   Message  @relation(fields: [messageId], references: [id], onDelete: Cascade)
+
+  @@unique([messageId, userId])
+}
+
+model Category {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  description String?
+  icon        String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model SubscriptionPlan {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  price       Float
+  features    String
+  maxServices Int
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  subscriptions BusinessSubscription[]
+}
+
+model BusinessSubscription {
+  id         String   @id @default(uuid())
+  businessId String   @unique
+  planId     String
+  status     String   @default("ACTIVE")
+  startDate  DateTime @default(now())
+  endDate    DateTime?
+  business   Business @relation(fields: [businessId], references: [id])
+  plan       SubscriptionPlan @relation(fields: [planId], references: [id])
+}
+
+model AIConversation {
+  id        String      @id @default(uuid())
+  userId    String?
+  role      String
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+  messages  AIMessage[]
+
+  @@index([userId])
+  @@index([role])
+}
+
+model AIMessage {
+  id             String         @id @default(uuid())
+  conversationId String
+  role           String
+  content        String
+  createdAt      DateTime       @default(now())
+  conversation   AIConversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+
+  @@index([conversationId])
+}

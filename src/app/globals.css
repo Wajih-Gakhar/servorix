@@ -1,0 +1,451 @@
+:root {
+    color-scheme: dark !important;
+    /* ------------------------------------- */
+    /* 1. Core Servora Colors                */
+    /* ------------------------------------- */
+    --color-primary: #00B4D8;       /* Glowing Cyan/Teal */
+    --color-primary-light: #48CAE4; /* Soft Cyan */
+    --color-accent: #0077B6;        /* Deep Blue Accent */
+    --color-accent-hover: #023E8A;  /* Darker Blue */
+    
+    --color-success: #10B981;
+    --color-error: #EF4444;
+    --color-warning: #F59E0B;
+  
+    /* ------------------------------------- */
+    /* 2. Deep Navy/Black Theme              */
+    /* ------------------------------------- */
+    --bg-main: #06090e;             /* Near-Black Violet/Navy Base */
+    --bg-card: #0c121a;             /* Secondary Depth Element */
+    --bg-glass: rgba(12, 18, 26, 0.65); /* Frosted Dark Panel */
+    --border-color: rgba(0, 180, 216, 0.15); /* Faint Servora borders */
+  
+    /* ------------------------------------- */
+    /* 3. Typography                         */
+    /* ------------------------------------- */
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --text-inverse: #ffffff;        /* Buttons texts default white */
+    
+    --font-sans: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    
+    /* ------------------------------------- */
+    /* 4. Shadows & Glow Distributions       */
+    /* ------------------------------------- */
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.6);
+    --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.75);
+    
+    /* Dedicated Glass & Neon Shadows */
+    --shadow-glow: 0 0 20px rgba(0, 180, 216, 0.25);
+    --shadow-button-glow: 0 4px 15px rgba(0, 180, 216, 0.4);
+    --shadow-glass: 0 8px 32px 0 rgba(0, 180, 216, 0.05);
+  
+    /* ------------------------------------- */
+    /* 5. Utility Layout Vectors             */
+    /* ------------------------------------- */
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
+    --radius-pill: 9999px;
+    
+    /* Spring physics-like transitions */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  html {
+    font-size: 14.5px;
+  }
+  
+  /* Reset */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Global DOM Body Injection */
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-main);
+    
+    /* Massive dual-radial gradient to give the background depth */
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(0, 180, 216, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(0, 119, 182, 0.05) 0%, transparent 40%);
+    background-attachment: fixed;
+  
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Text & Link Handlers */
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+  a:hover {
+    color: var(--color-primary);
+  }
+  
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  
+  /* Typography Utility */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 0.5em;
+    color: var(--text-primary);
+    letter-spacing: -0.02em; /* Tighter tracking for modern aesthetic */
+  }
+  
+  p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+  }
+  
+  /* Layout Matrices */
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+  
+  /* Global Buttons - The Glowing Matrix */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    border-radius: var(--radius-pill);
+    transition: all var(--transition-bounce);
+    gap: 0.5rem;
+  }
+  
+  /* Primary Servora Button */
+  .btn-primary {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    color: var(--text-inverse);
+    box-shadow: var(--shadow-button-glow);
+    border: none;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 8px 25px rgba(0, 180, 216, 0.5);
+  }
+  
+  .btn-secondary {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+  }
+  .btn-secondary:hover {
+    background-color: rgba(0, 180, 216, 0.1);
+    border-color: var(--color-primary);
+    transform: translateY(-1px);
+  }
+  
+  /* Pure Glassmorphic Containers */
+  .card, .glass-card {
+    background: var(--bg-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    
+    border: 1px solid var(--border-color);
+    /* Subtle top highlight for 3D physics mapping */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+    
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-glass);
+    overflow: hidden;
+    transition: transform var(--transition-bounce), box-shadow var(--transition-normal), border-color var(--transition-normal);
+  }
+  .card:hover, .glass-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-glow);
+    border-color: rgba(0, 180, 216, 0.3);
+  }
+  .glass-card-scale:hover {
+    transform: scale(1.03) translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 180, 216, 0.15);
+  }
+  .glass-card-bg {
+    background: rgba(255,255,255,0.01);
+  }
+  .glass-card-bg:hover {
+    background: rgba(0, 180, 216, 0.05);
+  }
+
+  /* Dashboard Utility Glows */
+  .shadow-glow {
+    box-shadow: var(--shadow-glow) !important;
+  }
+  .shadow-glow-error {
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.2) !important;
+  }
+  
+  /* Form Physical Architecture */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  .form-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+  }
+  .form-input {
+    width: 100%;
+    padding: 0.7rem 1.15rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    background-color: rgba(0,0,0,0.2); /* Deep inset background */
+    color: var(--text-primary);
+    font-family: inherit;
+    transition: all var(--transition-fast);
+    color-scheme: dark; /* Force native controls to dark */
+  }
+  .form-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background-color: rgba(0, 180, 216, 0.05);
+    box-shadow: 0 0 0 4px rgba(0, 180, 216, 0.15);
+  }
+  .form-input::placeholder {
+    color: rgba(255,255,255,0.2);
+  }
+  
+  /* Select Option Visibility Fix */
+  select.form-input {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgba(0, 180, 216, 0.5)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.2rem;
+    padding-right: 3rem;
+  }
+
+  option {
+    background-color: #0c121a !important; /* var(--bg-card) hex equivalent */
+    color: #F8FAFC !important;           /* var(--text-primary) hex equivalent */
+    padding: 0.5rem;
+  }
+
+  /* Global Fallbacks for all Inputs - NO !important here to allow specific overrides */
+  input, select, textarea {
+    background-color: rgba(0,0,0,0.3);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+  }
+
+  input:focus, select:focus, textarea:focus {
+    background-color: rgba(0, 180, 216, 0.05);
+    border-color: var(--color-primary);
+  }
+  
+  /* Status Badges */
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.85rem;
+    border-radius: var(--radius-pill);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    backdrop-filter: blur(8px);
+    border: 1px solid transparent;
+  }
+  .badge-success { background-color: rgba(16, 185, 129, 0.15); color: var(--color-success); border-color: rgba(16, 185, 129, 0.3); }
+  .badge-warning { background-color: rgba(245, 158, 11, 0.15); color: var(--color-warning); border-color: rgba(245, 158, 11, 0.3); }
+  .badge-error { background-color: rgba(239, 68, 68, 0.15); color: var(--color-error); border-color: rgba(239, 68, 68, 0.3); }
+  
+  /* ------------------------------------- */
+  /* Advanced Application Animations       */
+  /* ------------------------------------- */
+  
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in-down {
+    animation: fadeInDown 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in-up {
+    animation: fadeInUp 0.7s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+  }
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes pulseGlow {
+    0% { box-shadow: 0 0 0 0 rgba(0, 180, 216, 0.5); }
+    70% { box-shadow: 0 0 0 20px rgba(0, 180, 216, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 180, 216, 0); }
+  }
+  .animate-pulse-glow {
+    animation: pulseGlow 2.5s infinite;
+  }
+  
+  /* ------------------------------------- */
+  /* Lenis Structural Bindings             */
+  /* ------------------------------------- */
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
+  }
+
+  /* Footer Social Hover Styling */
+  .footer-social-icon:hover {
+    color: var(--color-primary) !important;
+    border-color: rgba(0, 180, 216, 0.4) !important;
+    background-color: rgba(0, 180, 216, 0.1) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 180, 216, 0.25);
+  }
+
+  /* ------------------------------------- */
+  /* Mobile & Tablet Responsiveness Scope  */
+  /* (Desktop Lock: Applied ONLY <= 768px)  */
+  /* ------------------------------------- */
+  @media (max-width: 768px) {
+    /* 1. Navbar & Header Scaling */
+    nav {
+      padding: 0.5rem 0 !important;
+    }
+    nav img[src*="servorixLogo"] {
+      height: 42px !important;
+      margin-left: -10px !important;
+    }
+    nav .container {
+      padding: 0 0.75rem !important;
+    }
+    nav div[style*="display: flex"] {
+      gap: 0.5rem !important;
+    }
+
+    /* 2. Hero Section & Landing Page */
+    section {
+      padding-top: 3.5rem !important;
+      padding-bottom: 3.5rem !important;
+    }
+    h1 {
+      font-size: 2.2rem !important;
+      line-height: 1.2 !important;
+    }
+    h2 {
+      font-size: 1.8rem !important;
+      line-height: 1.25 !important;
+    }
+    .container {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+
+    /* 3. Dashboard Layouts & Sidebar Collapsing */
+    div[style*="gridTemplateColumns: minmax"],
+    div[style*="gridTemplateColumns: 250px 1fr"],
+    div[style*="gridTemplateColumns: 260px 1fr"] {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1.25rem !important;
+    }
+
+    div[style*="position: sticky"][style*="top: 6rem"],
+    div[style*="position: 'sticky'"] {
+      position: relative !important;
+      top: 0 !important;
+      width: 100% !important;
+      box-shadow: none !important;
+    }
+
+    /* 4. Cards & Grid Containers */
+    .glass-card {
+      padding: 1.25rem !important;
+    }
+
+    div[style*="gridTemplateColumns: repeat"] {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* 5. AI Chat Pages & Messages */
+    div[class*="chat"],
+    div[class*="Chat"] {
+      word-break: break-word;
+      overflow-wrap: anywhere;
+    }
+
+    div[style*="maxWidth: 80%"],
+    div[style*="max-width: 80%"],
+    div[style*="maxWidth: 75%"] {
+      max-width: 92% !important;
+    }
+
+    /* 6. Tables & Data Grids Horizontal Overflow */
+    table {
+      display: block !important;
+      width: 100% !important;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch !important;
+      white-space: nowrap !important;
+    }
+
+    /* 7. Form Controls & Touch Targets */
+    .form-input, input, select, textarea {
+      font-size: 16px !important; /* Prevents auto-zoom on iOS Safari */
+      min-height: 44px !important;
+    }
+
+    .btn {
+      min-height: 44px !important;
+      padding: 0.6rem 1.2rem !important;
+    }
+
+    /* 8. Footer & Developer Information */
+    footer div[style*="justifyContent: space-between"] {
+      flex-direction: column !important;
+      text-align: center !important;
+      align-items: center !important;
+      gap: 1.25rem !important;
+    }
+  }
+
+

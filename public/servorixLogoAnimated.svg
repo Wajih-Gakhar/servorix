@@ -1,0 +1,67 @@
+<svg id="servora-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 80" width="480" height="107">
+  <style>
+.o1 { stroke-dasharray: 95; stroke-dashoffset: 95; animation: draw 0.65s cubic-bezier(0.4,0,0.2,1) 0.1s both, pulse1 4s ease-in-out 3.6s infinite; }
+.o2 { stroke-dasharray: 130; stroke-dashoffset: 130; animation: draw 0.75s cubic-bezier(0.4,0,0.2,1) 0.4s both, pulse2 4.8s ease-in-out 3.9s infinite; }
+.o3 { stroke-dasharray: 80; stroke-dashoffset: 80; animation: draw 0.6s cubic-bezier(0.4,0,0.2,1) 0.7s both, pulse3 3.8s ease-in-out 4.2s infinite; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes pulse1 { 0%,100%{opacity:1} 50%{opacity:0.38} }
+@keyframes pulse2 { 0%,100%{opacity:1} 50%{opacity:0.32} }
+@keyframes pulse3 { 0%,100%{opacity:0.8} 50%{opacity:0.25} }
+.n1a { opacity:0; transform:scale(0); transform-origin:66px 54px; animation: pop 0.38s cubic-bezier(0.34,1.7,0.64,1) 0.72s both, floatN1 3.4s ease-in-out 3.8s infinite; }
+.n1b { opacity:0; transform:scale(0); transform-origin:66px 54px; animation: pop 0.32s cubic-bezier(0.34,1.7,0.64,1) 0.86s both, floatN1 3.4s ease-in-out 3.8s infinite; }
+.n2a { opacity:0; transform:scale(0); transform-origin:32px 62px; animation: pop 0.38s cubic-bezier(0.34,1.7,0.64,1) 1.12s both, floatN2 4.0s ease-in-out 4.1s infinite; }
+.n2b { opacity:0; transform:scale(0); transform-origin:32px 62px; animation: pop 0.32s cubic-bezier(0.34,1.7,0.64,1) 1.26s both, floatN2 4.0s ease-in-out 4.1s infinite; }
+.n3a { opacity:0; transform:scale(0); transform-origin:40px 57px; animation: pop 0.38s cubic-bezier(0.34,1.7,0.64,1) 1.28s both, floatN3 3.6s ease-in-out 4.4s infinite; }
+.n3b { opacity:0; transform:scale(0); transform-origin:40px 57px; animation: pop 0.32s cubic-bezier(0.34,1.7,0.64,1) 1.42s both, floatN3 3.6s ease-in-out 4.4s infinite; }
+@keyframes pop { to { opacity:1; transform:scale(1); } }
+@keyframes floatN1 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(2px,-2.5px)} }
+@keyframes floatN2 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(-2px,2px)} }
+@keyframes floatN3 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(1px,-2px)} }
+.hex-poly { opacity:0; transform:scale(0) rotate(-18deg); transform-origin:40px 40px; animation: hexSpring 0.55s cubic-bezier(0.34,1.56,0.64,1) 1.55s both; }
+.hex-glow-poly { opacity:0; transform:scale(0); transform-origin:40px 40px; animation: hexSpring 0.45s cubic-bezier(0.34,1.56,0.64,1) 1.68s both, glowPulse 3.2s ease-in-out 3.7s infinite; }
+@keyframes hexSpring { to { opacity:1; transform:scale(1) rotate(0deg); } }
+@keyframes glowPulse { 0%,100%{opacity:0.12} 50%{opacity:0.35} }
+.cdot { opacity:0; transform:scale(0); transform-origin:40px 40px; animation: pop 0.4s cubic-bezier(0.34,1.8,0.64,1) 1.82s both, breathe 2.8s ease-in-out 3.6s infinite; }
+.ccore { opacity:0; transform:scale(0); transform-origin:40px 40px; animation: pop 0.34s cubic-bezier(0.34,1.8,0.64,1) 1.96s both; }
+@keyframes breathe { 0%,100%{transform:scale(1)} 50%{transform:scale(1.28)} }
+.wser { opacity:0; transform:translateX(-16px); animation: slideIn 0.5s cubic-bezier(0.4,0,0.2,1) 2.18s both; }
+.wdot { opacity:0; transform:scale(0); transform-origin:290px 46px; animation: pop 0.42s cubic-bezier(0.34,1.9,0.64,1) 2.66s both, dotPulse 2.6s ease-in-out 3.9s infinite; }
+@keyframes slideIn { to { opacity:1; transform:translateX(0); } }
+@keyframes dotPulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.4)} }
+.orbit-group-1 { transform-origin: 40px 40px; animation: revolve1 18s linear 3.2s infinite; }
+.orbit-group-2 { transform-origin: 40px 40px; animation: revolve2 24s linear 3.2s infinite; }
+.orbit-group-3 { transform-origin: 40px 40px; animation: revolve3 14s linear 3.2s infinite; }
+@keyframes revolve1 { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+@keyframes revolve2 { from{transform:rotate(0deg)} to{transform:rotate(-360deg)} }
+@keyframes revolve3 { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+  </style>
+  <defs>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <linearGradient id="orbitGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="orbitGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0EA5E9" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0EA5E9" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="orbitGrad3" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(2, 2)">
+    <g class="orbit-group-1"><path class="o1" d="M 38,10 A 30,30 0 0,1 64,52" stroke="url(#orbitGrad1)" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle class="n1a" cx="64" cy="52" r="3.5" fill="#06B6D4"/><circle class="n1b" cx="64" cy="52" r="1.8" fill="#1E293B"/></g>
+    <g class="orbit-group-2"><path class="o2" d="M 38,17 A 22,22 0 0,0 16,40 A 22,22 0 0,0 30,60" stroke="url(#orbitGrad2)" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle class="n2a" cx="30" cy="60" r="3.5" fill="#0EA5E9"/><circle class="n2b" cx="30" cy="60" r="1.8" fill="#1E293B"/></g>
+    <g class="orbit-group-3"><path class="o3" d="M 50,22 A 15,15 0 0,1 53,40 A 15,15 0 0,1 38,55" stroke="url(#orbitGrad3)" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle class="n3a" cx="38" cy="55" r="3.5" fill="#06B6D4" opacity="0.8"/><circle class="n3b" cx="38" cy="55" r="1.8" fill="#1E293B"/></g>
+    <polygon class="hex-poly" points="38,27 47.5,32.5 47.5,43.5 38,49 28.5,43.5 28.5,32.5" fill="#1E293B" stroke="url(#tealGrad)" stroke-width="1.8"/>
+    <polygon class="hex-glow-poly" points="38,30.5 45,34.5 45,42.5 38,46.5 31,42.5 31,34.5" fill="#06B6D4" opacity="0.12"/>
+    <circle class="cdot" cx="38" cy="38" r="4.5" fill="url(#tealGrad)"/>
+    <circle class="ccore" cx="38" cy="38" r="2" fill="white" opacity="0.9"/>
+  </g>
+  <text class="wser" x="90" y="51" font-family="'Sora', 'Outfit', 'Montserrat', sans-serif" font-size="30" font-weight="700" letter-spacing="-0.3" fill="#C0CAD6">Serv<tspan fill="#06B6D4">orix</tspan></text>
+  <circle class="wdot" cx="288" cy="44" r="3.2" fill="#06B6D4"/>
+</svg>
