@@ -134,34 +134,25 @@ export default function Footer() {
 
             {/* Portfolio Placeholder */}
             <a
-              href="#"
+              href="https://v0-wajih-portfolio.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              title="Portfolio (Placeholder)"
+              title="Portfolio Profile"
               aria-label="Portfolio Profile"
-              onClick={(e) => e.preventDefault()}
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                gap: '0.4rem',
-                padding: '0.4rem 0.85rem',
-                borderRadius: 'var(--radius-pill)',
+                width: '38px',
+                height: '38px',
+                borderRadius: '50%',
                 backgroundColor: 'rgba(255, 255, 255, 0.04)',
                 border: '1px solid var(--border-color)',
                 color: 'var(--text-secondary)',
-                fontSize: '0.8rem',
-                textDecoration: 'none',
-                cursor: 'default',
-                opacity: 0.85,
               }}
               className="footer-social-icon"
             >
-              <Globe size={15} />
-              <span>Portfolio</span>
-              <span style={{ fontSize: '0.7rem', color: 'var(--color-primary)', background: 'rgba(0, 180, 216, 0.15)', border: '1px solid rgba(0, 180, 216, 0.3)', padding: '0.1rem 0.4rem', borderRadius: '4px' }}>
-                Coming Soon
-              </span>
+              <Globe size={18} />
             </a>
           </div>
         </div>
