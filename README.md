@@ -98,7 +98,7 @@ The demonstration highlights:
 ## 📸 Screenshots
 
 - **Landing Page:**  
-  ![Landing Page]()
+  ![Landing Page](assets/landing-page/LandingPage1.PNG)
 
 - **Customer Dashboard:**  
   ![Customer Dashboard](screenshots/customer-dashboard.png)
