@@ -8,37 +8,49 @@
 ![Prisma](https://img.shields.io/badge/Prisma-6.0-2D3748?style=flat-square&logo=prisma)
 ![PostgreSQL](https://img.shields.io/badge/Neon_PostgreSQL-Serverless-4169E1?style=flat-square&logo=postgresql)
 ![Google AI](https://img.shields.io/badge/Google_AI_Studio-Gemini_Flash-8E44AD?style=flat-square&logo=google)
+![Vercel](https://img.shields.io/badge/Deployment-Vercel-000000?style=flat-square&logo=vercel)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
 ---
 
 ## 📋 Table of Contents
 
-- [About Servorix](#about-servorix)
-- [Key Features](#key-features)
-  - [Public Portal](#public-portal)
-  - [Customer Dashboard](#customer-dashboard)
-  - [Business Owner Dashboard](#business-owner-dashboard)
-  - [Admin Dashboard](#admin-dashboard)
-  - [AI Suite](#ai-suite)
-  - [Authentication & Access Control](#authentication--access-control)
-  - [Booking Engine & Payments](#booking-engine--payments)
-  - [Analytics & Reports](#analytics--reports)
-- [AI Architecture & Provider Failover](#ai-architecture--provider-failover)
-- [Technology Stack](#technology-stack)
-- [Project Architecture](#project-architecture)
-- [Folder Structure](#folder-structure)
-- [Installation & Setup](#installation--setup)
-- [Environment Variables](#environment-variables)
-- [Running Locally](#running-locally)
-- [Deployment on Vercel](#deployment-on-vercel)
-- [Screenshots](#screenshots)
-- [Security & Compliance](#security--compliance)
-- [Performance & Optimization](#performance--optimization)
-- [Future Enhancements](#future-enhancements)
-- [Developer Info](#developer-info)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
+- [About Servorix](#-about-servorix)
+- [Live Demo](#-live-demo)
+- [Source Code](#-source-code)
+- [Project Demonstration](#-project-demonstration)
+- [Screenshots](#-screenshots)
+- [Demo Accounts](#-demo-accounts)
+- [Preloaded Sample Data](#-preloaded-sample-data)
+- [Quick Evaluation Guide](#-quick-evaluation-guide)
+- [Suggested AI Prompts](#-suggested-ai-prompts)
+- [Feature Status Overview](#-feature-status-overview)
+- [Key Features](#-key-features)
+  - [Public Portal](#-public-portal)
+  - [Customer Dashboard](#-customer-dashboard)
+  - [Business Owner Dashboard](#-business-owner-dashboard)
+  - [Admin Dashboard](#-admin-dashboard)
+  - [AI Suite](#-ai-suite)
+  - [Authentication & Access Control](#-authentication--access-control)
+  - [Booking Engine & Payments](#-booking-engine--payments)
+  - [Analytics & Reports](#-analytics--reports)
+- [AI Architecture & Personas](#-ai-architecture--personas)
+  - [AI System Prompt Philosophy](#-ai-system-prompt-philosophy)
+  - [Multi-Key Provider Manager & Failover](#-multi-key-provider-manager--failover)
+- [Technology Stack](#-technology-stack)
+- [Project Architecture](#-project-architecture)
+- [Folder Structure](#-folder-structure)
+- [Installation & Setup](#-installation--setup)
+- [Environment Variables](#-environment-variables)
+- [Running Locally](#-running-locally)
+- [Deployment](#-deployment)
+- [Security & Compliance](#-security--compliance)
+- [Performance & Optimization](#-performance--optimization)
+- [Future Enhancements](#-future-enhancements)
+- [Developer Info](#-developer-info)
+- [Reviewer Notes](#-reviewer-notes)
+- [License](#-license)
+- [Acknowledgements](#-acknowledgements)
 
 ---
 
@@ -50,7 +62,137 @@
 Traditional scheduling software relies on manual record-keeping, static forms, and rigid interfaces that fail to engage customers or provide actionable business insights. Salon and gym owners frequently lose revenue to schedule conflicts, unoptimized pricing, manual customer support, and unengaged leads.
 
 ### The Servorix Solution
-Servorix integrates automated real-time booking, role-based dashboards, and a sophisticated multi-persona **AI Suite**. Powered by Google AI Studio's Gemini models and Vercel AI SDK, Servorix features an autonomous Multi-Key Provider Manager that delivers 100% uptime with automatic HTTP 429 failover, real-time database queries, intent routing, and intelligent marketing automation.
+Servorix integrates automated real-time booking, role-based dashboards, and a sophisticated multi-persona **AI Suite**. Powered by Google AI Studio's Gemini Flash models and Vercel AI SDK, Servorix features an autonomous Multi-Key Provider Manager that delivers 100% uptime with automatic HTTP 429 failover, real-time database queries, intent routing, and intelligent marketing automation.
+
+---
+
+## 🌐 Live Demo
+
+**Production Deployment:** [https://servorix.vercel.app](https://servorix.vercel.app)
+
+---
+
+## 📂 Source Code
+
+**Public Repository:** [https://github.com/Wajih-Gakhar/servorix](https://github.com/Wajih-Gakhar/servorix)
+
+---
+
+## 🎥 Project Demonstration
+
+A complete video walkthrough of the Servorix platform is available demonstrating real-time booking flows, multi-tenant dashboards, intent-driven AI interactions, and administration tooling.
+
+**Demo Video Walkthrough:**  
+
+> https://github.com/user-attachments/assets/577efcd5-57c4-4269-81e1-f66cbc3771ee
+
+The demonstration highlights:
+- **Landing Page & Public AI Concierge**
+- **Customer Portal:** Appointments, rescheduling, profile management, and Customer AI Assistant
+- **Business Owner Operations Matrix:** Enterprise switcher, service CRUD, working hours, revenue analytics, and Owner AI Suite
+- **Platform Administration Panel:** Global statistics, business verification auditing, category taxonomy management, and Admin AI Intelligence
+- **Multi-Key Failover:** Resilient AI response generation across Google AI Studio provider keys
+
+---
+
+## 📸 Screenshots
+
+- **Landing Page:**  
+  ![Landing Page]()
+
+- **Customer Dashboard:**  
+  ![Customer Dashboard](screenshots/customer-dashboard.png)
+
+- **Owner Dashboard:**  
+  ![Owner Dashboard](screenshots/owner-dashboard.png)
+
+- **Admin Dashboard:**  
+  ![Admin Dashboard](screenshots/admin-dashboard.png)
+
+- **AI Assistant:**  
+  ![AI Assistant](screenshots/ai-assistant.png)
+
+- **Booking Flow:**  
+  ![Booking Flow](screenshots/booking-flow.png)
+
+---
+
+## 🔑 Demo Accounts
+
+These evaluation accounts are provided exclusively for academic review so evaluators can instantly test every user role (`ADMIN`, `OWNER`, `CUSTOMER`) without creating new accounts.
+
+| Role | Email | Password | Dashboard Access & Capabilities |
+| :--- | :--- | :--- | :--- |
+| **Platform Administrator** | `<ADMIN_EMAIL>` | `<ADMIN_PASSWORD>` | Global ecosystem metrics, business verification audits, category taxonomy, and Platform Intelligence AI |
+| **Business Owner** | `<OWNER_EMAIL>` | `<OWNER_PASSWORD>` | Multi-business switcher, service management, schedule hours, analytics, and Owner AI Suite |
+| **Customer** | `<CUSTOMER_EMAIL>` | `<CUSTOMER_PASSWORD>` | Active booking history, profile settings, user-to-owner chat, and Customer AI Assistant |
+
+---
+
+## 📊 Preloaded Sample Data
+
+To facilitate comprehensive evaluation, the live deployment environment is pre-populated with realistic demonstration data:
+- **Registered Enterprise Businesses:** Pre-configured salons and fitness centers with operating hours and staff services.
+- **Service Catalog:** Structured services with defined durations, categories, and pricing tiers.
+- **Appointment History:** Historical and upcoming bookings spanning `PENDING`, `APPROVED`, `COMPLETED`, and `CANCELLED` statuses.
+- **User & Customer Profiles:** Pre-configured customer credentials and executive owner profiles.
+- **Revenue Analytics:** Historical transaction records supporting Recharts analytics graphs and financial calculations.
+- **AI-Ready Context:** Populated database records enabling real-time tool execution during AI queries.
+
+
+
+## 🧪 Quick Evaluation Guide
+
+Evaluators can follow this streamlined workflow to test the live platform:
+
+1. **Open Live Deployment:** Navigate to [https://servorix.vercel.app](https://servorix.vercel.app).
+2. **Watch Demonstration Video (Optional):** Review the platform overview via `<INSERT_DEMO_VIDEO_LINK_HERE>`.
+3. **Login as Customer:** Use the Customer Demo Credentials (`<CUSTOMER_EMAIL>`) to view active bookings and test profile settings.
+4. **Test Customer AI:** Ask the AI assistant: *"Show my previous bookings"* or *"Recommend a salon under Rs. 2,000"*.
+5. **Switch to Business Owner:** Log in using Owner Demo Credentials (`<OWNER_EMAIL>`) to test service management, working hours, and revenue analytics graphs.
+6. **Test Owner AI Suite:** Ask the Business Advisor: *"Summarize my booking analytics"* or *"Write an Instagram promotion for my business"*.
+7. **Login as Administrator:** Access the Admin Panel (`<ADMIN_EMAIL>`) to review platform overview metrics and category taxonomies.
+8. **Test Admin AI Intelligence:** Ask the Platform AI: *"Provide gross revenue and platform fee analytics"*.
+
+---
+
+## 🤖 Suggested AI Prompts
+
+Reviewers can execute the following role-specific prompts to evaluate the AI Suite's intent-routing and database tool invocation:
+
+### 👤 Customer Persona
+- *"Show my previous bookings."*
+- *"Recommend a salon under Rs. 2,000."*
+- *"How do I cancel or reschedule a booking?"*
+
+### 🏢 Business Owner Persona
+- *"Summarize my booking analytics."*
+- *"How can I improve bookings?"*
+- *"Write an Instagram promotion for my business."*
+
+### 🛡️ Platform Admin Persona
+- *"Provide gross revenue and platform fee analytics."*
+- *"How many businesses are registered?"*
+- *"Summarize platform performance."*
+
+
+
+## 📊 Feature Status Overview
+
+| Feature Module | Implementation Status |
+| :--- | :---: |
+| **Authentication & Session Tokens** | ✅ Completed |
+| **Role-Based Access Control (RBAC)** | ✅ Completed |
+| **Business Discovery & Multi-Filtering** | ✅ Completed |
+| **Real-Time Appointment Booking Engine** | ✅ Completed |
+| **Multi-Persona AI Suite (6 Personas)** | ✅ Completed |
+| **Customer Portal & Bookings History** | ✅ Completed |
+| **Business Owner Operations Matrix** | ✅ Completed |
+| **Platform Administrator Dashboard** | ✅ Completed |
+| **Business Analytics & Revenue Visualizers** | ✅ Completed |
+| **AI Marketing Campaign Generator** | ✅ Completed |
+| **Glassmorphic Responsive UI (Mobile & Desktop Lock)** | ✅ Completed |
+| **Production Deployment (Vercel + Neon PostgreSQL)** | ✅ Completed |
 
 ---
 
@@ -97,7 +239,28 @@ Servorix integrates automated real-time booking, role-based dashboards, and a so
 
 ---
 
-## 🧠 AI Architecture & Provider Failover
+## 🧠 AI Architecture & Personas
+
+Servorix equips users with **6 Specialized AI Personas**, built on top of Google AI Studio's Gemini Flash model and Vercel AI SDK:
+
+1. **Public Concierge:** Assists site visitors with platform navigation, service discovery, and general questions.
+2. **Customer Assistant:** Helps logged-in customers view active bookings, retrieve appointment histories, and discover open slots.
+3. **Business Advisor:** Provides owners with data-backed revenue strategies, service optimizations, and pricing models.
+4. **Analytics Intelligence:** Analyzes booking trends, peak hours, and customer retention metrics.
+5. **Marketing Studio:** Generates tailored promotional copy, social posts, and discount campaigns.
+6. **Platform Intelligence:** Empowers platform admins with global ecosystem metrics, business verification counts, and user growth insights.
+
+### AI System Prompt Philosophy
+
+The Servorix AI Suite is built on a disciplined system prompt philosophy:
+- **Strict Role Containment:** Instructs the AI to operate strictly within its designated persona and user permissions (`CUSTOMER`, `OWNER`, `ADMIN`, or `PUBLIC`).
+- **Direct FAQ & Informational Responses:** Answers general product questions and how-to guides directly without executing unnecessary database tool calls.
+- **Intent-Based Tool Invocation:** Triggers backend Prisma tools only when personal user data or live database metrics are required.
+- **Data Privacy & Security:** Protects sensitive system credentials, user tokens, and password hashes from exposure.
+- **Natural Language Synthesis:** Formats tool outputs into clear, professional GFM Markdown summaries with zero technical noise.
+- **Resource Efficiency:** Eliminates repetitive tool loops and unnecessary API key consumption.
+
+### Multi-Key Provider Manager & Failover
 
 Servorix implements a production-hardened **Multi-Key Provider Manager** (`ProviderManager`) designed to guarantee AI availability under free-tier quota constraints.
 
@@ -152,7 +315,9 @@ Servorix implements a production-hardened **Multi-Key Provider Manager** (`Provi
 | **ORM** | Prisma ORM 6 | Type-safe schema definition and database migrations |
 | **AI Framework** | Vercel AI SDK 4 / Google AI Studio | Model invocation, tool calling, and Gemini Flash integration |
 | **Authentication**| JOSE JWT | Edge-compatible token signing and HTTP-only session cookies |
+| **Deployment** | Vercel | Cloud hosting and continuous integration deployment |
 | **Styling** | Vanilla CSS & Tailwind CSS | Dark glassmorphism design system and dynamic utilities |
+| **Icons** | Lucide React | Clean, accessible SVG vector icon suite |
 | **Animations** | Framer Motion & Lenis | Smooth scrolling and page transition effects |
 | **Charts** | Recharts | Interactive business analytics and revenue visualizers |
 
@@ -260,7 +425,7 @@ Create a `.env` file in the root directory based on `.env.example`:
 | `DATABASE_URL` | Neon PostgreSQL pooled connection string | `postgresql://user:pass@ep-xyz.neon.tech/servorix` |
 | `JWT_SECRET` | Secret key for signing session JWT tokens | `super-secret-jwt-key` |
 | `JWT_REFRESH_SECRET` | Secret key for signing refresh tokens | `super-secret-refresh-key` |
-| `NEXT_PUBLIC_APP_URL` | Canonical production URL | `https://servorix.com` |
+| `NEXT_PUBLIC_APP_URL` | Canonical production URL | `https://servorix.vercel.app` |
 | `GEMINI_API_KEY` | Primary Google AI Studio API key | `AIzaSy...` |
 | `GEMINI_API_KEY_1..5` | Multi-key failover pool keys | `AIzaSy...` |
 
@@ -278,27 +443,21 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 ---
 
-## ☁️ Deployment on Vercel
+## 🚀 Deployment
 
-Servorix is natively optimized for Vercel deployment:
+Servorix is natively deployed on **Vercel** with a serverless **Neon PostgreSQL** database:
 
-1. Import your repository into Vercel.
+- **Hosting Platform:** Vercel
+- **Production URL:** [https://servorix.vercel.app](https://servorix.vercel.app)
+- **Database:** Neon Serverless PostgreSQL
+
+### Deployment Steps:
+1. Import your GitHub repository into Vercel.
 2. Configure Environment Variables (`DATABASE_URL`, `JWT_SECRET`, `GEMINI_API_KEY`).
-3. Set the build command to `npm run build`.
-4. Deploy! Next.js App Router and Prisma serverless connections will configure automatically.
+3. Set build script to `prisma generate && next build` (automated via `package.json`).
+4. Deploy!
 
----
 
-## 📸 Screenshots
-
-*(Placeholders — Replace with actual application screenshots)*
-
-- **Landing Page:** `![Servorix Landing Page](public/servorixLogo.svg)`
-- **Customer Dashboard:** `![Customer Dashboard](public/servorixIcon.svg)`
-- **Owner Dashboard:** `![Owner Dashboard](public/servorixIcon.svg)`
-- **AI Suite:** `![AI Suite](public/servorixIconAnimated.svg)`
-
----
 
 ## 🔒 Security & Compliance
 
@@ -338,9 +497,19 @@ Servorix is natively optimized for Vercel deployment:
 
 ---
 
-## 📜 License
+## ✅ Reviewer Notes
 
-Distributed under the **MIT License**. See `LICENSE` for details.
+- **Production Deployment:** The application is fully deployed and accessible live on [Vercel](https://servorix.vercel.app) backed by a serverless [Neon PostgreSQL](https://neon.tech) database.
+- **Open-Source Codebase:** Complete source code is available in the public [GitHub Repository](https://github.com/Wajih-Gakhar/servorix).
+- **Autonomous AI Operations:** AI tools execute live database queries with automatic multi-key failover handling.
+- **Security & Access Control:** Role-Based Access Control (`CUSTOMER`, `OWNER`, `ADMIN`) is strictly enforced via server-side JOSE JWT tokens.
+- **Zero Initial Setup:** Pre-seeded demonstration accounts and sample data allow immediate evaluation without registration steps.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**. See the `LICENSE` file for details.
 
 ---
 
@@ -355,3 +524,4 @@ Distributed under the **MIT License**. See `LICENSE` for details.
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Framer Motion](https://www.framer.com/motion/)
 - [Recharts](https://recharts.org/)
+- [Lucide React](https://lucide.dev/)
