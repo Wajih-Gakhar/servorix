@@ -1,5 +1,9 @@
 # Servorix — Enterprise Business Management & AI-Powered Booking SaaS
 
+<p align="center">
+  <img src="./public/servorixLogoAnimated.svg" alt="Servorix Animated Logo" width="280" />
+</p>
+
 > **Next-Generation Appointment Scheduling, Business Intelligence, and Autonomous AI Operations for Salons & Gyms.**
 
 ![Next.js](https://img.shields.io/badge/Next.js-16.0-black?style=flat-square&logo=next.js)
@@ -190,7 +194,7 @@ The demonstration highlights:
 </details>
 
 <details>
-  <summary><b>⚡ AI Assistant Demo </b></summary>
+  <summary><b>⚡ AI Assistants Demo </b></summary>
   <br />
   <table>
     <tr>
