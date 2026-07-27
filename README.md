@@ -22,7 +22,6 @@
 - [Screenshots](#-screenshots)
 - [Demo Accounts](#-demo-accounts)
 - [Preloaded Sample Data](#-preloaded-sample-data)
-- [Quick Evaluation Guide](#-quick-evaluation-guide)
 - [Suggested AI Prompts](#-suggested-ai-prompts)
 - [Feature Status Overview](#-feature-status-overview)
 - [Key Features](#-key-features)
@@ -98,7 +97,7 @@ The demonstration highlights:
 ## 📸 Screenshots
 
 <details>
-  <summary><b>🏠 Landing Page & Explore Page</b></summary>
+  <summary><b>🏠 Landing Page </b></summary>
   <br />
   <table>
     <tr>
@@ -113,15 +112,104 @@ The demonstration highlights:
       <td width="50%"><img src="assets/landing-page/LandingPage5.PNG" alt="Landing Page 5" /></td>
       <td width="50%"><img src="assets/landing-page/LandingPage6.PNG" alt="Landing Page 6" /></td>
     </tr>
+  </table>
+</details>
+
+<details>
+  <summary><b>🔍 Explore Page </b></summary>
+  <br />
+  <table>
     <tr>
       <td width="50%"><img src="assets/explore-page/ExplorePage1.PNG" alt="Explore Page 1" /></td>
       <td width="50%"><img src="assets/explore-page/ExplorePage2.PNG" alt="Explore Page 2" /></td>
+    </tr>
+    <tr>
+      <td width="50%"><img src="assets/explore-page/ExplorePage3.PNG" alt="Explore Page 3" /></td>
+      <td width="50%"></td>
     </tr>
   </table>
 </details>
 
 <details>
-  <summary><b>📅 Booking Flow & Customer Dashboard</b></summary>
+  <summary><b>👤 Customer Dashboard </b></summary>
+  <br />
+  <table>
+    <tr>
+      <td width="100%"><img src="assets/customer-dashboard/CustomerPage1.PNG" alt="Customer Dashboard" /></td>
+    </tr>
+  </table>
+</details>
+
+<details>
+  <summary><b>💼 Owner Dashboard </b></summary>
+  <br />
+  <table>
+    <tr>
+      <td width="50%"><img src="assets/owner-dashboard/OwnerPage1.PNG" alt="Owner Page 1" /></td>
+      <td width="50%"><img src="assets/owner-dashboard/OwnerPage2.PNG" alt="Owner Page 2" /></td>
+    </tr>
+    <tr>
+      <td width="50%"><img src="assets/owner-dashboard/OwnerPage3.PNG" alt="Owner Page 3" /></td>
+      <td width="50%"><img src="assets/owner-dashboard/OwnerPage4.PNG" alt="Owner Page 4" /></td>
+    </tr>
+  </table>
+</details>
+
+<details>
+  <summary><b>⚙️ Admin Dashboard </b></summary>
+  <br />
+  <table>
+    <tr>
+      <td width="50%"><img src="assets/admin-dashboard/AdminPage1.PNG" alt="Admin Page 1" /></td>
+      <td width="50%"><img src="assets/admin-dashboard/AdminPage2.PNG" alt="Admin Page 2" /></td>
+    </tr>
+    <tr>
+      <td width="50%"><img src="assets/admin-dashboard/AdminPage3.PNG" alt="Admin Page 3" /></td>
+      <td width="50%"></td>
+    </tr>
+  </table>
+</details>
+
+<details>
+  <summary><b>🤖 AI Assistants </b></summary>
+  <br />
+  <table>
+    <tr>
+      <td width="50%"><img src="assets/ai-assistants/Assistant1.PNG" alt="Assistant 1" /></td>
+      <td width="50%"><img src="assets/ai-assistants/Assistant2.PNG" alt="Assistant 2" /></td>
+    </tr>
+    <tr>
+      <td width="50%"><img src="assets/ai-assistants/Assistant3.PNG" alt="Assistant 3" /></td>
+      <td width="50%"><img src="assets/ai-assistants/Assistant4.PNG" alt="Assistant 4" /></td>
+    </tr>
+    <tr>
+      <td width="50%"><img src="assets/ai-assistants/Assistant5.PNG" alt="Assistant 5" /></td>
+      <td width="50%"><img src="assets/ai-assistants/Assistant6.PNG" alt="Assistant 6" /></td>
+    </tr>
+  </table>
+</details>
+
+<details>
+  <summary><b>⚡ AI Assistant Demo </b></summary>
+  <br />
+  <table>
+    <tr>
+      <td width="50%"><img src="assets/ai-assistant-demo/AIWorking1.PNG" alt="AI Working 1" /></td>
+      <td width="50%"><img src="assets/ai-assistant-demo/AIWorking2.PNG" alt="AI Working 2" /></td>
+    </tr>
+    <tr>
+      <td width="50%"><img src="assets/ai-assistant-demo/AIWorking3.PNG" alt="AI Working 3" /></td>
+      <td width="50%"><img src="assets/ai-assistant-demo/AIWorking4.PNG" alt="AI Working 4" /></td>
+    </tr>
+    <tr>
+      <td width="50%"><img src="assets/ai-assistant-demo/AIWorking5.PNG" alt="AI Working 5" /></td>
+      <td width="50%"><img src="assets/ai-assistant-demo/AIWorking6.PNG" alt="AI Working 6" /></td>
+    </tr>
+  </table>
+</details>
+
+<details>
+  <summary><b>📅 Booking Flow </b></summary>
   <br />
   <table>
     <tr>
@@ -138,45 +226,7 @@ The demonstration highlights:
     </tr>
     <tr>
       <td width="50%"><img src="assets/booking-flow/BookingFlow7.PNG" alt="Booking Flow 7" /></td>
-      <td width="50%"><img src="assets/customer-dashboard/CustomerPage1.PNG" alt="Customer Dashboard" /></td>
-    </tr>
-  </table>
-</details>
-
-<details>
-  <summary><b>🤖 AI Assistant & Demo</b></summary>
-  <br />
-  <table>
-    <tr>
-      <td width="50%"><img src="assets/ai-assistants/Assistant1.PNG" alt="Assistant 1" /></td>
-      <td width="50%"><img src="assets/ai-assistants/Assistant2.PNG" alt="Assistant 2" /></td>
-    </tr>
-    <tr>
-      <td width="50%"><img src="assets/ai-assistants/Assistant3.PNG" alt="Assistant 3" /></td>
-      <td width="50%"><img src="assets/ai-assistants/Assistant4.PNG" alt="Assistant 4" /></td>
-    </tr>
-    <tr>
-      <td width="50%"><img src="assets/ai-assistant-demo/AIWorking1.PNG" alt="AI Demo 1" /></td>
-      <td width="50%"><img src="assets/ai-assistant-demo/AIWorking2.PNG" alt="AI Demo 2" /></td>
-    </tr>
-    <tr>
-      <td width="50%"><img src="assets/ai-assistant-demo/AIWorking3.PNG" alt="AI Demo 3" /></td>
-      <td width="50%"><img src="assets/ai-assistant-demo/AIWorking4.PNG" alt="AI Demo 4" /></td>
-    </tr>
-  </table>
-</details>
-
-<details>
-  <summary><b>👑 Owner & Admin Dashboards</b></summary>
-  <br />
-  <table>
-    <tr>
-      <td width="50%"><img src="assets/owner-dashboard/OwnerPage1.PNG" alt="Owner Page 1" /></td>
-      <td width="50%"><img src="assets/owner-dashboard/OwnerPage2.PNG" alt="Owner Page 2" /></td>
-    </tr>
-    <tr>
-      <td width="50%"><img src="assets/admin-dashboard/AdminPage1.PNG" alt="Admin Page 1" /></td>
-      <td width="50%"><img src="assets/admin-dashboard/AdminPage2.PNG" alt="Admin Page 2" /></td>
+      <td width="50%"><img src="assets/booking-flow/BookingFlow8.PNG" alt="Booking Flow 8" /></td>
     </tr>
   </table>
 </details>
@@ -189,9 +239,9 @@ These evaluation accounts are provided exclusively for academic review so evalua
 
 | Role | Email | Password | Dashboard Access & Capabilities |
 | :--- | :--- | :--- | :--- |
-| **Platform Administrator** | `<ADMIN_EMAIL>` | `<ADMIN_PASSWORD>` | Global ecosystem metrics, business verification audits, category taxonomy, and Platform Intelligence AI |
-| **Business Owner** | `<OWNER_EMAIL>` | `<OWNER_PASSWORD>` | Multi-business switcher, service management, schedule hours, analytics, and Owner AI Suite |
-| **Customer** | `<CUSTOMER_EMAIL>` | `<CUSTOMER_PASSWORD>` | Active booking history, profile settings, user-to-owner chat, and Customer AI Assistant |
+| **Platform Administrator** | `anawah6admins@outlook.com` | `AnawahAdmins123` | Global ecosystem metrics, business verification audits, category taxonomy, and Platform Intelligence AI |
+| **Business Owner** | `jahan627@gmail.com` | `Jahan123` | Multi-business switcher, service management, schedule hours, analytics, and Owner AI Suite |
+| **Customer** | `zaryab7896@gmail.com` | `Zaryab123` | Active booking history, profile settings, user-to-owner chat, and Customer AI Assistant |
 
 ---
 
@@ -204,21 +254,6 @@ To facilitate comprehensive evaluation, the live deployment environment is pre-p
 - **User & Customer Profiles:** Pre-configured customer credentials and executive owner profiles.
 - **Revenue Analytics:** Historical transaction records supporting Recharts analytics graphs and financial calculations.
 - **AI-Ready Context:** Populated database records enabling real-time tool execution during AI queries.
-
-
-
-## 🧪 Quick Evaluation Guide
-
-Evaluators can follow this streamlined workflow to test the live platform:
-
-1. **Open Live Deployment:** Navigate to [https://servorix.vercel.app](https://servorix.vercel.app).
-2. **Watch Demonstration Video (Optional):** Review the platform overview via `<INSERT_DEMO_VIDEO_LINK_HERE>`.
-3. **Login as Customer:** Use the Customer Demo Credentials (`<CUSTOMER_EMAIL>`) to view active bookings and test profile settings.
-4. **Test Customer AI:** Ask the AI assistant: *"Show my previous bookings"* or *"Recommend a salon under Rs. 2,000"*.
-5. **Switch to Business Owner:** Log in using Owner Demo Credentials (`<OWNER_EMAIL>`) to test service management, working hours, and revenue analytics graphs.
-6. **Test Owner AI Suite:** Ask the Business Advisor: *"Summarize my booking analytics"* or *"Write an Instagram promotion for my business"*.
-7. **Login as Administrator:** Access the Admin Panel (`<ADMIN_EMAIL>`) to review platform overview metrics and category taxonomies.
-8. **Test Admin AI Intelligence:** Ask the Platform AI: *"Provide gross revenue and platform fee analytics"*.
 
 ---
 
@@ -241,7 +276,7 @@ Reviewers can execute the following role-specific prompts to evaluate the AI Sui
 - *"How many businesses are registered?"*
 - *"Summarize platform performance."*
 
-
+---
 
 ## 📊 Feature Status Overview
 
@@ -523,7 +558,7 @@ Servorix is natively deployed on **Vercel** with a serverless **Neon PostgreSQL*
 3. Set build script to `prisma generate && next build` (automated via `package.json`).
 4. Deploy!
 
-
+---
 
 ## 🔒 Security & Compliance
 
