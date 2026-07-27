@@ -97,23 +97,89 @@ The demonstration highlights:
 
 ## 📸 Screenshots
 
-- **Landing Page:**  
-  ![Landing Page](assets/landing-page/LandingPage1.PNG)
+<details>
+  <summary><b>🏠 Landing Page & Explore Page</b></summary>
+  <br />
+  <table>
+    <tr>
+      <td width="50%"><img src="assets/landing-page/LandingPage1.PNG" alt="Landing Page 1" /></td>
+      <td width="50%"><img src="assets/landing-page/LandingPage2.PNG" alt="Landing Page 2" /></td>
+    </tr>
+    <tr>
+      <td width="50%"><img src="assets/landing-page/LandingPage3.PNG" alt="Landing Page 3" /></td>
+      <td width="50%"><img src="assets/landing-page/LandingPage4.PNG" alt="Landing Page 4" /></td>
+    </tr>
+    <tr>
+      <td width="50%"><img src="assets/landing-page/LandingPage5.PNG" alt="Landing Page 5" /></td>
+      <td width="50%"><img src="assets/landing-page/LandingPage6.PNG" alt="Landing Page 6" /></td>
+    </tr>
+    <tr>
+      <td width="50%"><img src="assets/explore-page/ExplorePage1.PNG" alt="Explore Page 1" /></td>
+      <td width="50%"><img src="assets/explore-page/ExplorePage2.PNG" alt="Explore Page 2" /></td>
+    </tr>
+  </table>
+</details>
 
-- **Customer Dashboard:**  
-  ![Customer Dashboard](screenshots/customer-dashboard.png)
+<details>
+  <summary><b>📅 Booking Flow & Customer Dashboard</b></summary>
+  <br />
+  <table>
+    <tr>
+      <td width="50%"><img src="assets/booking-flow/BookingFlow1.PNG" alt="Booking Flow 1" /></td>
+      <td width="50%"><img src="assets/booking-flow/BookingFlow2.PNG" alt="Booking Flow 2" /></td>
+    </tr>
+    <tr>
+      <td width="50%"><img src="assets/booking-flow/BookingFlow3.PNG" alt="Booking Flow 3" /></td>
+      <td width="50%"><img src="assets/booking-flow/BookingFlow4.PNG" alt="Booking Flow 4" /></td>
+    </tr>
+    <tr>
+      <td width="50%"><img src="assets/booking-flow/BookingFlow5.PNG" alt="Booking Flow 5" /></td>
+      <td width="50%"><img src="assets/booking-flow/BookingFlow6.PNG" alt="Booking Flow 6" /></td>
+    </tr>
+    <tr>
+      <td width="50%"><img src="assets/booking-flow/BookingFlow7.PNG" alt="Booking Flow 7" /></td>
+      <td width="50%"><img src="assets/customer-dashboard/CustomerPage1.PNG" alt="Customer Dashboard" /></td>
+    </tr>
+  </table>
+</details>
 
-- **Owner Dashboard:**  
-  ![Owner Dashboard](screenshots/owner-dashboard.png)
+<details>
+  <summary><b>🤖 AI Assistant & Demo</b></summary>
+  <br />
+  <table>
+    <tr>
+      <td width="50%"><img src="assets/ai-assistants/Assistant1.PNG" alt="Assistant 1" /></td>
+      <td width="50%"><img src="assets/ai-assistants/Assistant2.PNG" alt="Assistant 2" /></td>
+    </tr>
+    <tr>
+      <td width="50%"><img src="assets/ai-assistants/Assistant3.PNG" alt="Assistant 3" /></td>
+      <td width="50%"><img src="assets/ai-assistants/Assistant4.PNG" alt="Assistant 4" /></td>
+    </tr>
+    <tr>
+      <td width="50%"><img src="assets/ai-assistant-demo/AIWorking1.PNG" alt="AI Demo 1" /></td>
+      <td width="50%"><img src="assets/ai-assistant-demo/AIWorking2.PNG" alt="AI Demo 2" /></td>
+    </tr>
+    <tr>
+      <td width="50%"><img src="assets/ai-assistant-demo/AIWorking3.PNG" alt="AI Demo 3" /></td>
+      <td width="50%"><img src="assets/ai-assistant-demo/AIWorking4.PNG" alt="AI Demo 4" /></td>
+    </tr>
+  </table>
+</details>
 
-- **Admin Dashboard:**  
-  ![Admin Dashboard](screenshots/admin-dashboard.png)
-
-- **AI Assistant:**  
-  ![AI Assistant](screenshots/ai-assistant.png)
-
-- **Booking Flow:**  
-  ![Booking Flow](screenshots/booking-flow.png)
+<details>
+  <summary><b>👑 Owner & Admin Dashboards</b></summary>
+  <br />
+  <table>
+    <tr>
+      <td width="50%"><img src="assets/owner-dashboard/OwnerPage1.PNG" alt="Owner Page 1" /></td>
+      <td width="50%"><img src="assets/owner-dashboard/OwnerPage2.PNG" alt="Owner Page 2" /></td>
+    </tr>
+    <tr>
+      <td width="50%"><img src="assets/admin-dashboard/AdminPage1.PNG" alt="Admin Page 1" /></td>
+      <td width="50%"><img src="assets/admin-dashboard/AdminPage2.PNG" alt="Admin Page 2" /></td>
+    </tr>
+  </table>
+</details>
 
 ---
 
